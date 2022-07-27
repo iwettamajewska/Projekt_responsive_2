@@ -6,8 +6,28 @@
 }
 
 .container {
-    width: 80vw;
+    width: 960px;
     margin: 0 auto;
+}
+
+
+@media screen and (max-width:768px){
+    .container {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .container {
+        width: 90vw;
+    }
+}
+
+
+@media screen and (min-width:1025px){
+    .container {
+        width: 80vw;
+    }
 }
 
 /* NAVIGATION SECTION */
@@ -34,13 +54,22 @@ background-color: #4E4E4E;
     font-size: 1rem;
 }
 
+
 .link-lists {
+        display: none;
+}
+
+
+@media screen and (min-width:1025px){
+    .link-lists {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     text-align: right;
     font-weight: 400;
 }
+    }
+
 
 .link {
     color: #FFFFFF;
@@ -56,7 +85,7 @@ cursor: not-allowed;
 /* FOREST SECTION */
 
 .img_forest {
-    min-height: 31.89;
+    min-height: 31.89rem;
     background-image: url("image_forest-min.png");
     background-size: cover;
     background-position: center;
@@ -82,7 +111,6 @@ cursor: not-allowed;
 .text-and-rectangle {
 position: absolute;
 top: 50%;
-left: 236px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -109,7 +137,7 @@ color: #FFFFFF;
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
-    border: 3px solid #FFFFFF;
+    border: 0.17rem solid #FFFFFF;
     padding: 0.55rem;
 }
 
@@ -125,6 +153,12 @@ color: #FFFFFF;
 background-color: #F1F1F1;
 }
 
+@media screen and (max-width:1024px){
+    .main-text-experts {
+        text-align: center;
+    }
+}
+
 .main-text-experts {
     font-weight: 700;
     font-size: 2rem;
@@ -132,15 +166,33 @@ background-color: #F1F1F1;
     padding: 1.11rem 0;
 }
 
+
+@media screen and (max-width:1024px){
+    .about-experts {
+        flex-wrap: wrap;
+    }
+}
+
 .about-experts {
     display: flex;
     align-items: center;
 }
 
-.about-experts:nth-of-type(even) {
-flex-direction: row-reverse;
-text-align: right;
+
+@media screen and (min-width:1025px){
+    .about-experts:nth-of-type(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+    }
 }
+
+@media screen and (max-width:1024px){
+    .lorem-expert{
+        text-align: justify;
+        margin: 1.11rem 0;
+    }
+    }
+
 
 .expert {
     display: flex;
@@ -156,6 +208,21 @@ text-align: right;
 .second-expert {
     margin-right: 1.11rem;
 }
+
+@media screen and (max-width:1024px){
+    .circle {
+        margin: 1.11rem;
+    }
+}
+
+/* Czemu to nie działa? */
+/* @media screen and (max-width:1024px){
+    .circle {
+        display: flex;
+        justify-content: center;
+    }
+} */
+
 
 .circle {
     width: 12.28rem;
@@ -176,9 +243,21 @@ text-align: right;
 
 }
 
+@media screen and (max-width:1024px){
+    .name-expert {
+        text-align: center;
+        margin: 1.11rem;
+    }
+}
+
 .name-expert {
     font-weight: bold;
 }
+
+
+
+
+
 
 
 /* ABOUT COMPANY SECTION */
@@ -189,23 +268,46 @@ text-align: right;
     padding: 1.11rem 0;
 }
 
+@media screen and (max-width:1024px){
+    .main-text-about-company {
+        text-align: justify;
+    }
+}
+
 .main-text-about-company {
-    font-size: 2rem;
+    font-size: 1.44rem;
     font-weight: 700;
     color: #FFFFFF;
-    width: 960px;
     margin: 0 auto;
     padding: 1.11rem 0;
 }
 
+@media screen and (max-width:1024px) {
+    .container-of-company-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:1025px) {
 .container-of-company-boxes {
     display: grid;
-    grid-template-columns: 198px 198px 198px;
-    grid-template-rows: 193.78px 193.78px;
+    grid-template-columns: 11rem 11rem 11rem;
+    grid-template-rows: 10.77rem 10.77rem;
     grid-gap: 0.55rem;
     justify-content: center;
     align-items: center;
 }
+}
+
+@media screen and (max-width:1024px) {
+    .box {
+    margin: 1.11rem 0;
+}
+}
+
 
 .box {
     display: flex;
@@ -213,8 +315,8 @@ text-align: right;
     align-items: center;
     background-color: #F1F1F1;
     border: 0.06rem solid #F1F1F1;
-    width: 198px;
-    height: 193.78px;
+    width: 11rem;
+    height: 10.77rem;
     font-size: 1rem;
     font-weight: 400;
 }
@@ -257,12 +359,29 @@ text-align: right;
     background-color: #4E4E4E;
 }
 
+
+@media screen and (max-width:1024px){
+    .footer-container {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+}
+
 .footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
+
+@media screen and (min-width:1025px){
+    .footer-container {
+        justify-content: space-between;
+    }
+}
+
+
 
 .text-in-footer {
     color: #FFFFFF;
@@ -271,13 +390,15 @@ text-align: right;
     font-weight: 700;
 }
 
-.container-of-text-in-footer {
+@media screen and (min-width:1025px){
+  .container-of-text-in-footer {
     width: 95%;
 }
-
 .container-of-icons {
     width: 5%;
+} 
 }
+
 
 .container-of-icons {
     display: flex;
