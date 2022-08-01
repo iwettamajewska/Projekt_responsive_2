@@ -242,8 +242,8 @@
 }
 
 .socialmedia-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  min-width: 31px;
+  height: auto;
   color: #ffffff;
 }
 
@@ -334,7 +334,7 @@
     align-items: center;
   }
   .footer {
-    padding: 0 1.11rem;
+    padding: 1.11rem;
   }
   .footer-container {
     justify-content: space-between;
