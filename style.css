@@ -62,7 +62,7 @@
 
 .img_forest {
   min-height: 31.89rem;
-  background-image: url("zzzzzz.jpg");
+  background-image: url("images/image-forest-min.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -156,7 +156,7 @@
 }
 
 .first-circle {
-  background-image: url("img/image-forest-min.png");
+  background-image: url("images/img-woman.jpg");
 }
 
 .second-circle {
