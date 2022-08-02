@@ -115,6 +115,7 @@
 
 .about-us-container {
   background-color: #f1f1f1;
+  padding-bottom: 1.11rem;
 }
 
 .main-text-experts {
@@ -246,7 +247,6 @@
   height: auto;
   color: #ffffff;
 }
-
 
 /* @MEDIA SECTION */
 
