@@ -51,16 +51,7 @@
 
 /* FOREST SECTION */
 
-/* .img_forest {
-  min-height: 31.89rem;
-  background-image: url("image_forest-min.png");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin: 0 auto;
-} */
-
-.img_forest {
+.img-forest {
   min-height: 31.89rem;
   background-image: url("images/image-forest-min.png");
   background-size: cover;
@@ -105,7 +96,7 @@
   padding: 0 0 1.11rem;
 }
 
-.text_in_the_rectangle {
+.text-in-the-rectangle {
   width: 4.44rem;
   height: auto;
   text-align: center;
@@ -115,7 +106,7 @@
   padding: 0.55rem;
 }
 
-.text_in_the_rectangle:hover {
+.text-in-the-rectangle:hover {
   background-color: #ffffff;
   color: #000000;
 }
