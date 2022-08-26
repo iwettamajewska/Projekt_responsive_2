@@ -5,6 +5,10 @@
   font-size: 18px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 60rem;
   margin: 0 auto;
@@ -25,9 +29,8 @@
   color: #ffffff;
 }
 
-.container-my-company,
 .container-links {
-  width: 50%;
+  width: 25%;
 }
 
 .container-my-company {
@@ -52,7 +55,7 @@
 /* FOREST SECTION */
 
 .img-forest {
-  min-height: 31.89rem;
+  min-height: calc(100vh - 2.78rem);
   background-image: url("images/image-forest-min.png");
   background-size: cover;
   background-position: center;
@@ -88,7 +91,7 @@
   font-weight: 700;
   font-size: 2rem;
   padding: 0 0 1.11rem;
-}
+  }
 
 .short-text {
   font-weight: 700;
@@ -96,7 +99,7 @@
   padding: 0 0 1.11rem;
 }
 
-.text-in-the-rectangle {
+.text-in-rectangle {
   width: 4.44rem;
   height: auto;
   text-align: center;
@@ -104,6 +107,7 @@
   font-size: 1rem;
   border: 0.17rem solid #ffffff;
   padding: 0.55rem;
+  transition: 1s;
 }
 
 .text-in-the-rectangle:hover {
@@ -115,14 +119,14 @@
 
 .about-us-container {
   background-color: #f1f1f1;
-  padding-bottom: 1.11rem;
+  padding: 2.22rem 0;
 }
 
 .main-text-experts {
   font-weight: 700;
   font-size: 2rem;
   color: #152d41;
-  padding: 1.11rem 0;
+  padding-bottom: 1.11rem;
 }
 
 .about-experts {
@@ -164,27 +168,29 @@
 .about-company {
   background-color: #405d78;
   height: auto;
-  padding: 1.11rem 0;
+  padding: 2.22rem 0;
 }
 
 .main-text-about-company {
-  font-size: 1.44rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0 auto;
-  padding: 1.11rem 0;
+  padding-bottom: 1.11rem;
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #f1f1f1;
   border: 0.06rem solid #f1f1f1;
   width: 11rem;
   height: 10.77rem;
   font-size: 1rem;
   font-weight: 400;
+  transition: 0.5s;
 }
 
 .box1 {
@@ -203,24 +209,13 @@
 }
 
 .box:hover {
-  animation-name: grow;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-}
-
-@keyframes grow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
+  transform: scale(1.05);
 }
 
 /* FOOTER SECTION */
 
 .footer {
-  height: auto;
+  height: 3.94rem;
   background-color: #4e4e4e;
 }
 
@@ -243,22 +238,60 @@
 }
 
 .socialmedia-icon {
-  min-width: 31px;
+  font-size: 1.72rem;
   height: auto;
   color: #ffffff;
 }
+
+
+/* FOOTER SECTION 2 */
+
+.footer {
+  height: 71px;
+  background-color: #4e4e4e;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.text-in-footer {
+  color: #ffffff;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container-of-text-in-footer {
+  width: 93%;
+}
+
+.container-of-icons {
+  width: 7%;
+}
+
+.container-of-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialmedia-icon {
+  font-size: 31px;
+  height: auto;
+  color: #ffffff;
+}
+
+
+
 
 /* @MEDIA SECTION */
 
 @media screen and (max-width: 768px) {
   .container {
     width: 95vw;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-    width: 90vw;
   }
   .main-text-experts {
     text-align: center;
@@ -279,7 +312,7 @@
     margin: 1.11rem;
   }
   .main-text-about-company {
-    text-align: justify;
+    text-align: center;
   }
   .container-of-company-boxes {
     display: flex;
@@ -302,18 +335,42 @@
   .text-in-footer {
     margin-bottom: 1.11rem;
   }
+  .socialmedia-icon {
+    padding: 0 0.7rem;
+  }
+  }
+
+
+  
+@media screen and (min-width: 769px) {
+  .container {
+    width: 90vw;
+  }
+  
 }
+
+
+
+
+
+
 
 @media screen and (min-width: 1025px) {
   .container {
-    width: 80vw;
+    width: 85vw;
   }
+
   .link-lists {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     text-align: right;
     font-weight: 400;
+  }
+  .text-in-rectangle:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 1s;
   }
   .about-experts:nth-of-type(even) {
     flex-direction: row-reverse;
@@ -329,20 +386,23 @@
     display: grid;
     grid-template-columns: 11rem 11rem 11rem;
     grid-template-rows: 10.77rem 10.77rem;
-    grid-gap: 0.55rem;
+    grid-gap: 3.5rem;
     justify-content: center;
     align-items: center;
   }
-  .footer {
+
+
+  
+.footer {
     padding: 1.11rem;
   }
   .footer-container {
     justify-content: space-between;
   }
   .container-of-text-in-footer {
-    width: 95%;
+    width: 92%;
   }
   .container-of-icons {
-    width: 5%;
+    width: 8%;
   }
 }
