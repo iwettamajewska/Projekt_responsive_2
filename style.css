@@ -91,7 +91,7 @@ html {
   font-weight: 700;
   font-size: 2rem;
   padding: 0 0 1.11rem;
-  }
+}
 
 .short-text {
   font-weight: 700;
@@ -243,7 +243,6 @@ html {
   color: #ffffff;
 }
 
-
 /* FOOTER SECTION 2 */
 
 .footer {
@@ -283,9 +282,6 @@ html {
   height: auto;
   color: #ffffff;
 }
-
-
-
 
 /* @MEDIA SECTION */
 
@@ -338,22 +334,13 @@ html {
   .socialmedia-icon {
     padding: 0 0.7rem;
   }
-  }
+}
 
-
-  
 @media screen and (min-width: 769px) {
   .container {
     width: 90vw;
   }
-  
 }
-
-
-
-
-
-
 
 @media screen and (min-width: 1025px) {
   .container {
@@ -391,9 +378,7 @@ html {
     align-items: center;
   }
 
-
-  
-.footer {
+  .footer {
     padding: 1.11rem;
   }
   .footer-container {
