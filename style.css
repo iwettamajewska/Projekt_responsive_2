@@ -1,8 +1,12 @@
-* {
-  font-family: "Roboto", sans-serif;
+html, body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
+  
 }
 
 html {
@@ -10,8 +14,9 @@ html {
 }
 
 .container {
-  width: 60rem;
+  /* width: 60rem; */
   margin: 0 auto;
+  padding: 20px;
 }
 
 /* NAVIGATION SECTION */
@@ -33,9 +38,11 @@ html {
   width: 25%;
 }
 
-.container-my-company {
+.heading-1 {
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
+  margin: 0;
 }
 
 .link-lists {
@@ -55,20 +62,14 @@ html {
 /* FOREST SECTION */
 
 .img-forest {
-  min-height: calc(100vh - 2.78rem);
+  height: calc(100vh - 85px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
   background-image: url("images/image-forest-min.png");
   background-size: cover;
   background-position: center;
-  position: relative;
-  margin: 0 auto;
 }
-
-.shadow {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  position: absolute;
-}
+  
 
 .img-text-container {
   color: #ffffff;
@@ -245,7 +246,7 @@ html {
 
 /* @MEDIA SECTION */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .container {
     width: 95vw;
   }
@@ -282,29 +283,32 @@ html {
   .footer {
     padding: 1.11rem;
   }
-  /* .footer-container {
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-  } */
   .text-in-footer {
     margin-bottom: 1.11rem;
   }
   .socialmedia-icon {
     padding: 0 0.7rem;
   }
-}
+} */
 
-@media screen and (min-width: 769px) {
+
+
+/* @media screen and (min-width: 960px) {
   .container {
     width: 90vw;
   }
-}
+} */
 
-@media screen and (min-width: 1025px) {
+
+
+
+/* @media screen and (min-width: 1025px) {
   .container {
     width: 85vw;
   }
+
+
+
 
   .link-lists {
     display: flex;
@@ -336,7 +340,6 @@ html {
     justify-content: center;
     align-items: center;
   }
-
   .footer {
     padding: 1.11rem;
   }
@@ -346,4 +349,4 @@ html {
   .container-of-text-in-footer {
     width: 92%;
   }
-}
+} */
