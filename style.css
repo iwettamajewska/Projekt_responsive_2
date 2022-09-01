@@ -1,7 +1,14 @@
-html,
-body {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -11,6 +18,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .container {
@@ -35,7 +43,7 @@ html {
 }
 
 .container-links {
-  width: 25%;
+  display: none;
 }
 
 .heading-1 {
@@ -45,9 +53,6 @@ html {
   margin: 0;
 }
 
-.link-lists {
-  display: none;
-}
 
 .link {
   color: #ffffff;
@@ -87,6 +92,7 @@ html {
   color: #ffffff;
 }
 
+
 .long-text {
   font-weight: 700;
   font-size: 2rem;
@@ -107,10 +113,10 @@ html {
   font-size: 1rem;
   border: 0.17rem solid #ffffff;
   padding: 0.55rem;
-  transition: 1s;
+  transition: background-color 1s, color 1s;
 }
 
-.text-in-the-rectangle:hover {
+.text-in-rectangle:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -176,8 +182,6 @@ html {
 
 .about-company {
   background-color: #405d78;
-  height: auto;
-  padding: 2.22rem 0;
 }
 
 .main-text-about-company {
@@ -208,6 +212,11 @@ html {
   font-size: 1rem;
   font-weight: 400;
   margin: 1.11rem 0;
+  transition: transform 0.5s;
+}
+
+.box:hover {
+  transform: scale(1.05);
 }
 
 .box1 {
@@ -225,12 +234,9 @@ html {
   left: -0.61rem;
 }
 
-
-
 /* FOOTER SECTION */
 
 .footer {
-  height: 3.94rem;
   background-color: #4e4e4e;
 }
 
@@ -244,10 +250,13 @@ html {
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+  margin: 0;
 }
 
 .container-of-icons {
   display: flex;
+  justify-content: center;
+  margin-top: 10px;
   column-gap: 10px;
 }
 
@@ -257,109 +266,47 @@ html {
   color: #ffffff;
 }
 
-/* @MEDIA SECTION */
-
-/* @media screen and (min-width: 768px) {
-  .container {
-    width: 95vw;
-  }
-  .main-text-experts {
-    text-align: center;
-  }
-  .about-experts {
+@media screen and (min-width: 769px) {
+  .container-of-company-boxes {
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  .lorem-expert {
-    text-align: justify;
-    margin: 1.11rem 0;
-  }
-  .circle {
-    margin: 1.11rem;
-  }
-  .name-expert {
-    text-align: center;
-    margin: 1.11rem;
-  }
-  .main-text-about-company {
-    text-align: center;
-  }
-  .container-of-company-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .box {
-    margin: 1.11rem 0;
+    column-gap: 20px;
   }
   .footer {
-    padding: 1.11rem;
-  }
-  .text-in-footer {
-    margin-bottom: 1.11rem;
-  }
-  .socialmedia-icon {
-    padding: 0 0.7rem;
-  }
-} */
-
-/* @media screen and (min-width: 960px) {
-  .container {
-    width: 90vw;
-  }
-} */
-
-/* @media screen and (min-width: 1025px) {
-  .container {
-    width: 85vw;
-  }
-
-
-
-
-  .link-lists {
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    text-align: right;
-    font-weight: 400;
-  }
-  .text-in-rectangle:hover {
-    background-color: #ffffff;
-    color: #000000;
-    transition: 1s;
-  }
-  .about-experts:nth-of-type(even) {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-  .first-expert {
-    margin-left: 1.11rem;
-  }
-  .second-expert {
-    margin-right: 1.11rem;
-  }
-  .container-of-company-boxes {
-    display: grid;
-    grid-template-columns: 11rem 11rem 11rem;
-    grid-template-rows: 10.77rem 10.77rem;
-    grid-gap: 3.5rem;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-   } 
-  
-  .box:hover {
-  transform: scale(1.05);
-}
-  .footer {
-    padding: 1.11rem;
-  }
-  .footer-container {
     justify-content: space-between;
+    align-items: center;
   }
-  .container-of-text-in-footer {
-    width: 92%;
-  }
-} */
+}
+
+@media screen and (min-width: 1025px) {
+.container-links {
+  display: flex;
+  list-style: none;
+  column-gap: 20px;
+}
+.main-text-experts {
+  text-align: left;
+}
+.about-experts {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.about-experts:nth-of-type(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.main-text-about-company {
+  text-align: left;
+}
+.container-of-company-boxes {
+  display: grid;
+  grid-template-columns: 11rem 11rem 11rem;
+  grid-gap: 40px;
+ } 
+ .box {
+  margin: 0;
+ }
+}
+
